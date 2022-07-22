@@ -29,14 +29,21 @@ void setup()
 //
 void draw()
 {
-  ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter); //Example Circle Drawing Tool
+  if ( draw == true && mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter); //Example Circle Drawing Tool
 }//End draw
 //
-void keyPressed() {}//End keyPressed
+void keyPressed() {
+}//End keyPressed
 //
 void mousePressed()
 {
-  if ( mouseX> && mouseX< && mouseY> && mouseY< ) draw = true;
+  if ( mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight ) {
+    if ( draw == true ) {
+      draw=false;
+    } else {
+      draw = true;
+    }
+  } //End drawing tools
 }//End mousePressed
 //
 //End MAIN Program
