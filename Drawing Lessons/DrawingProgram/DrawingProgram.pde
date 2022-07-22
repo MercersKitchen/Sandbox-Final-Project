@@ -7,6 +7,7 @@ import ddf.minim.ugens.*;
 
 //Global Variables
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
+Boolean draw=false;
 //
 void setup()
 {
@@ -33,6 +34,9 @@ void draw()
 //
 void keyPressed() {}//End keyPressed
 //
-void mousePressed() {}//End mousePressed
+void mousePressed()
+{
+  if ( mouseX> && mouseX< && mouseY> && mouseY< ) draw = true;
+}//End mousePressed
 //
 //End MAIN Program
