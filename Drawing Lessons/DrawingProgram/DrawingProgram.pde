@@ -6,6 +6,7 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
 //Global Variables
+float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
 //
 void setup()
 {
@@ -15,12 +16,20 @@ void setup()
   size(500, 600); //Landscape (Portrait or Square)
   //
   //Population
+  drawingSurfaceX = width*0;
+  drawingSurfaceY = height*0;
+  drawingSurfaceWidth = width*3/4;
+  drawingSurfaceHeight = height*4/5;
+  drawingDiameter = width*1/100;
   //
-  rect();
+  rect( drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight );
   //
 }//End setup
 //
-void draw() {}//End draw
+void draw()
+{
+  ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter); //Example Circle Drawing Tool
+}//End draw
 //
 void keyPressed() {}//End keyPressed
 //
